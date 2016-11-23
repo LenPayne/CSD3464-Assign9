@@ -75,10 +75,11 @@ public class Assign9Test {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < count; i++)
             sb.append("word ");
+        sb.deleteCharAt(sb.length() - 1);
         sb.append(".");
         int expResult = count;
         int result = Assign9.wordCount(sb.toString());
-        assertEquals(expResult, result);
+        assertEquals("Checking to see if '" + sb.toString() + "' has " + expResult + " words.", expResult, result);
     }
 
     /**
